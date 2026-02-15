@@ -6,6 +6,16 @@
 
 **Contents:**
 - **Data:** `Data/` — Includes required datasets downloadable from OpenSecrets: https://www.opensecrets.org/bulk-data (Must create a registration).
+
+| Entity (Table)  | Primary Key (PK)               | Foreign Keys (FK)              | What it represents                              | Key relationships                                          |
+| --------------- | ------------------------------ | ------------------------------ | ----------------------------------------------- | ---------------------------------------------------------- |
+| `lob_lobbying`  | `Uniqid`                       | —                              | One lobbying report/filing (the central record) | Parent of issues, agencies, lobbyists                      |
+| `lob_issues`    | `SI_ID`                        | `Uniqid -> lob_lobbying.Uniqid` | Issues listed on a lobbying report              | Many issues per report                                     |
+| `lob_bills`     | `B_ID`                         | `SI_ID -> lob_issues.SI_ID`     | Bills tied to a specific issue                  | Many bills per issue                                       |
+| `lob_agency`    | `(Uniqid, AgencyID)`           | `Uniqid -> lob_lobbying.Uniqid` | Agencies referenced by a report                 | Many agencies per report                                   |
+| `lob_lobbyists` | `(UniqID, Lobbyist_id)`        | `UniqID -> lob_lobbying.Uniqid` | Lobbyists associated with a report              | Many lobbyists per report                                  |
+| `lob_indus`     | `(Client, Sub, Year, Catcode)` | (logical link only)            | Yearly totals by client/sub + industry code     | Summarizes many `lob_lobbying` rows by client/year/catcode |
+
   
 - **Notebooks:**
 	- `Notebooks/Collaborative Contributions/8414_Final_Project_Codebook_prod.ipynb` — Full project notebook (group work).
