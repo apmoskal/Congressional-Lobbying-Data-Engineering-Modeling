@@ -1,0 +1,1 @@
+Empty placeholder for 'lob_indus.txt' downloadable from here: https://www.opensecrets.org/bulk-data
