@@ -1,6 +1,6 @@
 # Congressional-Lobbying-Data-Engineering-Modeling
 
-**Project:** Congressional Lobbying — Creating and working with complex datastructures to analyze lobbying expenditures.
+**Project:** Creating and working with complex datastructures to analyze congresstional lobbying expenditures.
 
 **Purpose:** Repository for a class project exploring congressional lobbying and working with SQLite and MongoDB for OpenSecrets lobbying datasets. 
 
