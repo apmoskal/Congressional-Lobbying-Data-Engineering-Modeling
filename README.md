@@ -18,8 +18,8 @@
 
   
 - **Notebooks:**
-	- `Notebooks/Collaborative Contributions/8414_Final_Project_Codebook_prod.ipynb` — Full project notebook (group work).
-	- `Notebooks/Section_7_Topic_Modeling.ipynb` — Standalone, runnable notebook with the Topic Modeling section I developed (recommended for portfolio review).
+	- `Notebooks/amoskal_finalproject_db.ipynb` — Full project notebook.
+
 - **Environment:** `requirements.txt` is included for reproducibility.
 
 **My Role:**
@@ -30,7 +30,7 @@ issues, bills, agencies, and industry totals.
 and visualizations to summarize patterns.
 
 **Notes & Assumptions**
-- The notebooks expect the datasets at `Data/newsapi_keyword_articles.csv` (fill as requested from OpenSecrets).
+- The notebooks expect the datasets at `Data/` (fill as requested from OpenSecrets).
 
 
 **Attribution & License**
